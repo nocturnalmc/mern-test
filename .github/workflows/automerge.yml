@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  automerge:
+  automerge-testing-1:
     runs-on: ubuntu-latest
     steps:
       - id: automerge
@@ -15,4 +15,12 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: 'automerge'
-          MERGE_METHOD: 'rebase'
+  automerge-testing-2:
+    runs-on: ubuntu-latest
+    steps:
+      - id: automerge
+        name: automerge
+        uses: 'pascalgn/automerge-action@v0.15.3'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          MERGE_LABELS: 'automerge'
