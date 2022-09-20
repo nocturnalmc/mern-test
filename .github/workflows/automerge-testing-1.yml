@@ -1,9 +1,8 @@
-name: automerge
+name: Automerge testing 1
 on:
   workflow_run:
     workflows: [Sync master into other branch]
     types: [completed]
-    branches: [master]
 
 jobs:
   automerge:
@@ -14,4 +13,3 @@ jobs:
         uses: 'pascalgn/automerge-action@v0.15.3'
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          MERGE_LABELS: ''
