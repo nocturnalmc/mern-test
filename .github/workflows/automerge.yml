@@ -1,8 +1,10 @@
-name: Automerge testing 1
+name: Automerge
 on:
-  workflow_run:
-    workflows: [Sync master into other branch]
-    types: [completed]
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
 
 jobs:
   automerge:
