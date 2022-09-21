@@ -39,3 +39,54 @@ jobs:
           FROM_BRANCH: 'master'
           TO_BRANCH: 'testing-2'
           LABELS: '["automerge"]'
+  sync-branch-testing-3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Opening pull request
+        id: pull
+        uses: nocturnalmc/sync-branches@v1.5.0
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: 'master'
+          TO_BRANCH: 'testing-3'
+          LABELS: '["automerge"]'
+  sync-branch-testing-4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Opening pull request
+        id: pull
+        uses: nocturnalmc/sync-branches@v1.5.0
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: 'master'
+          TO_BRANCH: 'testing-4'
+          LABELS: '["automerge"]'
+  sync-branch-testing-5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Opening pull request
+        id: pull
+        uses: nocturnalmc/sync-branches@v1.5.0
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: 'master'
+          TO_BRANCH: 'testing-5'
+          LABELS: '["automerge"]'
