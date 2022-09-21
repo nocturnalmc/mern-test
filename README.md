@@ -1,3 +1,9 @@
 # Testing MERN Stack
 
-[![Build Status](https://jenkinsdato.nocturnal.quest/buildStatus/icon?job=mern-test-jenkins-docker)](https://jenkinsdato.nocturnal.quest/job/mern-test-jenkins-docker/)
+### Staging build status
+
+[![Build Status](https://jenkins.nocturnal.quest/buildStatus/icon?job=mern-test-staging)](https://jenkins.nocturnal.quest/job/mern-test-staging/)
+
+### Master build status
+
+[![Build Status](https://jenkins.nocturnal.quest/buildStatus/icon?job=mern-test-production)](https://jenkins.nocturnal.quest/job/mern-test-production/)

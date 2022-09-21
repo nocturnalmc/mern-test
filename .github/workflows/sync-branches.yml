@@ -1,8 +1,8 @@
-name: Sync master into other branch
+name: Sync staging into other branch
 on:
   push:
     branches:
-      - master
+      - staging
 
 jobs:
   sync-branch-testing-1:
@@ -19,7 +19,7 @@ jobs:
         uses: nocturnalmc/sync-branches@v1.5.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'master'
+          FROM_BRANCH: 'staging'
           TO_BRANCH: 'testing-1'
           LABELS: '["automerge"]'
   sync-branch-testing-2:
@@ -36,7 +36,7 @@ jobs:
         uses: nocturnalmc/sync-branches@v1.5.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'master'
+          FROM_BRANCH: 'staging'
           TO_BRANCH: 'testing-2'
           LABELS: '["automerge"]'
   sync-branch-testing-3:
@@ -53,7 +53,7 @@ jobs:
         uses: nocturnalmc/sync-branches@v1.5.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'master'
+          FROM_BRANCH: 'staging'
           TO_BRANCH: 'testing-3'
           LABELS: '["automerge"]'
   sync-branch-testing-4:
@@ -70,7 +70,7 @@ jobs:
         uses: nocturnalmc/sync-branches@v1.5.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'master'
+          FROM_BRANCH: 'staging'
           TO_BRANCH: 'testing-4'
           LABELS: '["automerge"]'
   sync-branch-testing-5:
@@ -87,6 +87,6 @@ jobs:
         uses: nocturnalmc/sync-branches@v1.5.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'master'
+          FROM_BRANCH: 'staging'
           TO_BRANCH: 'testing-5'
           LABELS: '["automerge"]'

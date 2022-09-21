@@ -17,7 +17,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Learn React Yan nak trigger
+          Merge method rebase
         </a>
       </header>
     </div>
