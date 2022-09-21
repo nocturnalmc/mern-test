@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       pull-request:
-        description: Pull Request Number
+        description: Trigger Automerge
         required: false
 
 jobs:
