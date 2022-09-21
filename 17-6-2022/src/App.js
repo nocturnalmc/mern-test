@@ -17,7 +17,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Merge method rebase
+          Merge method normal
         </a>
       </header>
     </div>
