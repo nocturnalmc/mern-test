@@ -5,12 +5,13 @@
   "main": "server.js",
   "scripts": {
     "install-server": "npm install",
-    "install-client": "cd 17-6-2022 && npm install",
+    "install-client": "cd 22-3-2023 && npm install",
     "server": "nodemon server.js",
-    "client": "cd 17-6-2022 && npm start",
+    "client": "cd 22-3-2023 && npm run dev",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
-    "build-client": "cd 17-6-2022 && npm run build",
-    "deploy-local": "npm run build-client && npm run server"
+    "build-client": "cd 22-3-2023 && npm run build",
+    "deploy-local": "npm run build-client && npm start",
+    "start": "node server.js"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
