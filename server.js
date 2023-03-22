@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
-app.use(express.static('./17-6-2022/build'));
+app.use(express.static('./22-3-2023/dist'));
 
 app.get('/generate', (req, res) => {
   res.status(200).json({ generate: 'Successfull' });
