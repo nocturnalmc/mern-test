@@ -18,8 +18,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '22-3-2023', 'dist', 'index.html'));
 });
 
-app.all('*', (req, res) => {
+// not found
+app.use((req, res) => {
   res.status(404).json({ msg: 'Error: 404, route does not exist' });
+});
+
+// error handler
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ msg: 'Nope' });
 });
 
 const port = process.env.PORT || 7500;
