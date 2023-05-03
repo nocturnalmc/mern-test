@@ -4,6 +4,9 @@ const app = express();
 const path = require('path');
 
 const root = path.join(__dirname, '22-3-2023', 'dist');
+app.set('trust proxy', 1);
+app.disable('x-powered-by');
+
 app.use(express.static(root));
 
 app.get('/generate', (req, res) => {
@@ -12,6 +15,10 @@ app.get('/generate', (req, res) => {
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({ msg: 'This is API v1' });
+});
+
+app.get('/api/v1/ip', async (req, res) => {
+  return res.status(200).json({ yourIP: req.ip });
 });
 
 app.get('*', (req, res) => {
