@@ -1,5 +1,12 @@
-# base nodejs v18
-FROM node:18
+# pull the Node.js Docker image
+FROM node:lts-alpine
+
+# update the package index
+RUN apk update
+RUN apk add --no-cache tzdata
+
+# set timezone data
+ENV TZ=Asia/Kuala_Lumpur
 
 # create app directory
 WORKDIR /usr/src/app
@@ -8,14 +15,16 @@ WORKDIR /usr/src/app
 COPY . .
 
 # install node_modules
-RUN npm run install-server && npm run install-client
+RUN npm run install-prod
 
 # build client React JS
 RUN npm run build-client
 
-# app run on port 7500 & 7501
+# prune image for production
+RUN npm run prune-prod
+
+# app run on port 7500
 EXPOSE 7500
-EXPOSE 7501
 
 # run the server
-CMD [ "node", "server.js" ]
+CMD ["npm", "start"]

@@ -6,6 +6,8 @@
   "scripts": {
     "install-server": "npm install",
     "install-client": "cd 22-3-2023 && npm install",
+    "install-prod": "npm ci && cd 22-3-2023 && npm ci",
+    "prune-prod": "npm prune --omit=dev && cd 22-3-2023 && npm prune --omit=dev",
     "server": "nodemon server.js",
     "client": "cd 22-3-2023 && npm run dev",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
@@ -16,11 +18,11 @@
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "dotenv": "^16.0.2",
-    "express": "^4.17.3"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "concurrently": "^7.1.0",
-    "nodemon": "^2.0.15"
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
   }
 }
