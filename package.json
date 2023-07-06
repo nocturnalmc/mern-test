@@ -5,13 +5,13 @@
   "main": "server.js",
   "scripts": {
     "install-server": "npm install",
-    "install-client": "cd 22-3-2023 && npm install",
-    "install-prod": "npm ci && cd 22-3-2023 && npm ci",
-    "prune-prod": "npm prune --omit=dev && cd 22-3-2023 && npm prune --omit=dev",
+    "install-client": "cd 6-7-2023 && npm install",
+    "install-prod": "npm ci && cd 6-7-2023 && npm ci",
+    "prune-prod": "npm prune --omit=dev && cd 6-7-2023 && npm prune --omit=dev",
     "server": "nodemon server.js",
-    "client": "cd 22-3-2023 && npm run dev",
+    "client": "cd 6-7-2023 && npm run dev",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
-    "build-client": "cd 22-3-2023 && npm run build",
+    "build-client": "cd 6-7-2023 && npm run build",
     "deploy-local": "npm run build-client && npm start",
     "start": "node server.js"
   },
