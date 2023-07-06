@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const root = path.join(__dirname, '22-3-2023', 'dist');
+const root = path.join(__dirname, '6-7-2023', 'dist');
 app.set('trust proxy', 1);
 app.disable('x-powered-by');
 
@@ -22,7 +22,7 @@ app.get('/api/v1/ip', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '22-3-2023', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '6-7-2023', 'dist', 'index.html'));
 });
 
 // not found
