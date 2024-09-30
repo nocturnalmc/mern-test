@@ -5,15 +5,15 @@
   "main": "server.js",
   "scripts": {
     "install-server": "npm install",
-    "install-client": "cd 6-7-2023 && npm install",
-    "install-prod": "npm ci && cd 6-7-2023 && npm ci",
-    "prune-prod": "npm prune --omit=dev && cd 6-7-2023 && npm prune --omit=dev",
+    "install-client": "cd 30-9-2024 && npm install",
+    "install-prod": "npm ci && cd 30-9-2024 && npm ci",
+    "prune-prod": "npm ci --omit=dev && cd 30-9-2024 && npm ci --omit=dev",
     "server": "nodemon server.js",
-    "client": "cd 6-7-2023 && npm run dev",
+    "client": "cd 30-9-2024 && npm run dev",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
-    "build-client": "cd 6-7-2023 && npm run build",
-    "deploy-local": "npm run build-client && npm start",
-    "start": "node server.js"
+    "build-client": "cd 30-9-2024 && npm run build",
+    "deploy-local": "npm run build-client && npm run server",
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
@@ -22,7 +22,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "concurrently": "^8.0.1",
-    "nodemon": "^2.0.22"
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7"
   }
 }
